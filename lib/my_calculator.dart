@@ -127,7 +127,7 @@ class _MyCalculatorState extends State<MyCalculator> {
           width: MediaQuery.of(context).size.width * 0.9,
           alignment: Alignment.centerRight,
           child: SizedBox(
-            height: 50,
+            height: 35,
             child: FittedBox(
               fit: BoxFit.contain,
               child: Text(
@@ -151,6 +151,8 @@ class _MyCalculatorState extends State<MyCalculator> {
     return Scaffold(
       backgroundColor: Colors.black26,
       appBar: AppBar(
+        centerTitle: true,
+        toolbarHeight: MediaQuery.of(context).orientation == Orientation.landscape ? 20 : 30,
         title: Text('Calculator'),
         backgroundColor: Colors.black,
       ),
@@ -332,7 +334,7 @@ class _MyCalculatorState extends State<MyCalculator> {
                         children: <Widget>[
                           //this is button Zero
                           RaisedButton(
-                            padding: EdgeInsets.fromLTRB(205, 10, 205, 10),
+                            padding: EdgeInsets.fromLTRB(185, 10, 185, 10),
                             onPressed: () {
                               calculation('0');
                             },
@@ -350,9 +352,6 @@ class _MyCalculatorState extends State<MyCalculator> {
                           calcbutton_2(
                               '=', Colors.amber.shade700, Colors.white, 20),
                         ],
-                      ),
-                      const SizedBox(
-                        height: 10,
                       ),
                     ],
                   ),
