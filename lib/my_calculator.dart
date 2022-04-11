@@ -96,7 +96,6 @@ class _MyCalculatorState extends State<MyCalculator> {
       ),
     );
   }
-
   Widget calcbutton_2(
       String buttonText, Color buttonColor, Color textColor, double textSize) {
     return Container(
